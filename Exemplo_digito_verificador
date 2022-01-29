@@ -1,0 +1,15 @@
+// script que calcula o dígito verificador, conforme 
+// descrição feita em sala.
+// demonstra o uso dos operadores básicos no Octave.
+
+conta = input("Digite o número da conta (use 3 dígitos apenas):");
+d1 = idivide(int32(conta), int32(100), "fix");
+d2 = idivide( mod(int32(conta),100),int32(10), "fix");
+d3 = mod(int32(conta),10);
+inverso = d3 * 100 + d2 * 10 + d1;
+soma = conta + inverso;
+d1 = idivide(int32(soma), int32(100), "fix")*1;
+d2 = mod( idivide(int32(soma), int32(10), "fix"), 10 )*2;
+d3 = mod(int32(soma), 10)*3;
+digito = mod(int32(d1 + d2 + d3), 10);
+printf("digito verificador = %d\n", digito);
