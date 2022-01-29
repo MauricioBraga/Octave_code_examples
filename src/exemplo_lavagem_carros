@@ -1,0 +1,17 @@
+lavagem = input("Digite o tipo de lavagem: (1 – simples  2 – completa: )  \n");
+pagamento = input("Digite a forma de pagamento: (1 – a vista  2 – cartão: ) \n");
+
+
+if (lavagem == 1)
+    if (pagamento == 1)
+        printf("Valor: 30 reais. \n");
+    else
+        printf("Valor: 35 reais. \n");
+    endif
+else
+    if (pagamento == 1)
+        printf("Valor: 50 reais. \n");
+    else
+        printf("Valor: 55 reais. \n");
+    endif
+endif
